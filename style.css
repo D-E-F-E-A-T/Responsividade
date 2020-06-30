@@ -133,7 +133,7 @@ CARDS
   margin: auto;
 
   display: grid;
-  grid-template-columns: 310px 310px 310px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
 }
 
@@ -351,4 +351,20 @@ FORM
 
 #form .button {
   margin: 20px 8px 10px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 630px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container img {
+    order: -1;
+  }
 }
